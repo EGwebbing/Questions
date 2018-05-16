@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WebApp User Guide</title>
+
+</head>
+<body>
+<!-- Title of the html document; the format is derived from MS Word -->
+<div style='border:none;border-bottom:solid black 1.0pt;padding:0cm 0cm 4.0pt 0cm'>  
+<p><h1>WebApp: set questions for LocAsk – User guide</h1></p>
+</div>
+
+
+<h2>Guide content</h2> <!-- Content of the user guide for the browser-based app -->
+<p >The following guide explains how to use WebApp to set questions for LocAsk mobile app. 
+The guide contains:</p>
+<p><i> - System requirements;</i></p>
+<p><i> - How to start the app;</i></p>
+<p><i> - How the app works.</i></p>
+<p>The app is only developed for technical users who are responsible for managing the data accessed by LocAsk. 
+It should not be made public or accessed by final users who may enter unappropriate or wrong information into the app.</p>
+
+
+<h2>System requirements</h2> <!-- minimum requirements to run the browser app -->
+<p>The app necessitates a web-browser to be run. It works on Google Chrome, Microsoft Internet Explorer, Microsoft Edge, Safari, Opera
+and Mozilla Firefox.</p>
+<p>In order to load the webpage, the user must either run the app from a university computer centrally connected to the UCL LAN or alternatively be connected to the UCL VPN. 
+UCL members can download
+<a href="https://play.google.com/store/apps/details?id=com.cisco.anyconnect.vpn.android.avf&amp;hl=it"> Cisco AnyConnect</a> 
+to establish the VPN connection; further information on how to connect to the UCL VPN can be found at the following 
+<a href="http://www.ucl.ac.uk/isd/services/get-connected/remote-working/vpn">link</a>.</p>
+
+
+<h2>How to start the app</h2> <!-- how to start the app: it requires a server connection to work -->
+<p>The app does not require any installation and is available at the 
+<a href="http://developer.cege.ucl.ac.uk:31295/">WebApp URL web page</a>
+</p>
+<p>Be sure to be connected to the UCL VPN and start the NodeJSserver and the Phonegap server using a SSH software such as Bitvise, Cyberduck or Fugu.
+The connection is established using credentials:</p> <!-- credentials to access the server and start it -->
+<p><b>Host</b>: developer.cege.ucl.ac.uk</p>
+<p><b>SSH Port</b>: 30095</p>
+<p><b>Username</b>: studentuser</p>
+<p><b>Password</b>: XXXXXX - contact the administrator for the password</p>
+<p>Once the connection is established, the user must type the following commands in the terminal window to start the server:</p>
+<p> - cd /home/studentuser/code (press enter)</p>
+<p> - node NodeJSserver.js (press enter - the server is now running and data can be uploaded/downloaded)</p>
+<p> - cd /home/studentuser/code/WebApp/ucesegr (press enter)</p>
+<p> - sudo su (press enter and enter the admin password)</p>
+<p> - phonegap serve (press enter - the Phonegap server is now running)</p>
+<p>The user can now access 
+<a href="http://developer.cege.ucl.ac.uk:31295/">WebApp web page</a> 
+to enter new questions.</p>
+
+
+<h2>How the app works</h2> 
+<p>The app has been designed to be used on a computer and although it can also be accessed from mobile devices, it could be less convenient to operate.</p>
+<p>The page displays a map which can be explored to find new possible question locations. The coordinates of a specific point can be accessed by clicking 
+on the desired location and copying the lat long values displayed in the pop-up window. The coordinates can then be pasted in the respective fields in
+the <i>question form</i>. </p>
+<p>The <i>left-side menu</i> shows two options:</p>
+<p><b>Add a question</b>: the button redirects the user to the question form to add a new question;</p>
+<p><b>Load Points</b>: the button loads the points of interest already uploaded by the server on the database.</p>
+<p>The <i>question form</i> contains all the necessary fields to set a question. Once information has been inserted, clicking on the <i>Upload data</i> button will
+will record the question on the database. To set up another 
+question, either refresh the page or go back to the map, check the newly uploaded point" and open the question form again.</p>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!-- This HTML file contains the code used to se up the question form -->
+
+<head>
+	<title>Form which will upload the questions onto the database</title>
+</head>
+<body>
+	<!-- Title of the web page and a little comment that explains the user what to do -->
+	<h1>QUESTION FORM</h1>
+	<h3>Complete the form inserting accurate information to create a question</h3>
+<div>
+	<!-- the div is composed by all the fields that must be filled in order to create a new question -->
+	<label for="question">Question</label><input type="text" size="75" id="question"/><br />
+	<label for="q1">Answer 1</label><input type="text" size="20" id="answ1"/><br />
+	<label for="q2">Answer 2</label><input type="text" size="20" id="answ2"/><br />
+	<label for="q3">Answer 3</label><input type="text" size="20" id="answ3"/><br />
+	<label for="q4">Answer 4</label><input type="text" size="20" id="answ4"/><br />
+	<label for="correct_answer">Correct answer</label><input type="text" size="20" id="correct_answer"/><br />
+	<label for="lat">Latitude</label><input type="number" step="0.0001" size="15" id="lat"/><br />
+	<label for="lng">Longitude</label><input type="number" step="0.0001" size="15" id="lng"/><br />
+</div>
+
+<!-- the button uses the code contained in the uploadData.js file to upload data to the server -->
+<button id="uploadData" onclick="uploadData()">Upload data</button>
+
+<br />
+<!-- this div will show the results of the upload if it works fine -->
+<div id="dataUploadResult">The result of the upload will be shown here</div>
+
+<!-- script that references the uploadData.js file -->
+<script src= "./js/uploadData.js"></script>
+
+</body>
+</html>
